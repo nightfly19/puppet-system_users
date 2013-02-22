@@ -1,9 +1,7 @@
 class system_users(
+  $users,
   $managehome         = true,
   $homes              = '/home',
-  $users              = undef,
-  $with_tag           = undef,
-  $everywhere_tag     = 'everywhere',
   $user_resource_type = 'user',
   $key_resource_type  = 'ssh_authorized_key'
 ) {
