@@ -4,7 +4,8 @@ class system_users(
   $users              = undef,
   $with_tag           = undef,
   $everywhere_tag     = 'everywhere',
-  $user_resource_type = 'user'
+  $user_resource_type = 'user',
+  $key_resource_type  = 'ssh_authorized_key'
 ) {
 
   $group_aliases = {
@@ -24,7 +25,6 @@ class system_users(
       default   => '/bin/zsh',
     },
   }
-    
 
   if $users != undef {
     create_resources('system_users::user', $users)
